@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Weather Dashboard</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="current.html">Current</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Stay Ahead of the Weather</h1>
+            <p>Get real-time weather updates, forecasts, and helpful tips tailored to your location</p>
+            <div class="cta-buttons">
+                <a href="current.html" class="btn primary">Get Current Weather</a>
+                <a href="search.html" class="btn secondary">Search City</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="weather-card">
+                <div class="location">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Your Location</span>
+                </div>
+                <div class="temp-main">
+                    <span class="temp">72°F</span>
+                    <span class="condition">Sunny</span>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span>5 mph</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-droplet"></i>
+                        <span>45%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>What You Can Do</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-location-crosshairs"></i>
+                </div>
+                <h3>Current Weather</h3>
+                <p>Get real-time weather information for your current location</p>
+                <a href="current.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Search Cities</h3>
+                <p>Find weather information for any city worldwide</p>
+                <a href="search.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-days"></i>
+                </div>
+                <h3>5-Day Forecast</h3>
+                <p>Plan ahead with detailed 5-day weather forecasts</p>
+                <a href="forecast.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Compare Cities</h3>
+                <p>Compare weather conditions between two locations</p>
+                <a href="compare.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-vest"></i>
+                </div>
+                <h3>Weather Tips</h3>
+                <p>Get clothing and safety recommendations based on weather</p>
+                <a href="tips.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-circle-question"></i>
+                </div>
+                <h3>FAQ & Help</h3>
+                <p>Find answers to common questions about using the dashboard</p>
+                <a href="faq.html">Explore <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Weather Dashboard</h3>
+                <p>Providing accurate weather information and forecasts to help you plan your day.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="current.html">Current Weather</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Dynamic Weather Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

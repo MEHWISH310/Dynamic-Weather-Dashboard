@@ -1,0 +1,83 @@
+<!-- current.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather - Dynamic Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Weather Dashboard</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="current.html" class="active">Current</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="darkModeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Current Weather</h1>
+        <div class="weather-container">
+            <div id="current-weather" class="weather-card detailed">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Detecting your location...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentWeatherElement = document.getElementById('current-weather');
+            
+            // Get current location and weather
+            getCurrentLocation()
+                .then(coords => {
+                    return getWeatherByCoords(coords.lat, coords.lon);
+                })
+                .then(weatherData => {
+                    updateWeatherUI(weatherData, 'current-weather');
+                })
+                .catch(error => {
+                    currentWeatherElement.innerHTML = `
+                        <div class="error-message">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>${error.message || 'Unable to retrieve your location. Please try again or use the search feature.'}</p>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+</html>
